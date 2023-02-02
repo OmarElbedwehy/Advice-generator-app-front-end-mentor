@@ -81,6 +81,28 @@ footer{
     font-size: 1.2rem;
 }
 
+footer a{
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+footer a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: hsl(193, 38%, 86%);
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    bottom: -5px;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
 @keyframes rotate_dice {
     0%{
         transform: rotate(0);
